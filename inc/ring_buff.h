@@ -18,4 +18,4 @@ bool pushBuff(RingBuff *buff, uint8_t data);
 bool popBuff(RingBuff *buff, uint8_t *data);
 void clearBuff(RingBuff *buff);
 
-#endif //__MAIN_H
+#endif //__RING_BUFF_H

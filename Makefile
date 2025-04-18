@@ -12,7 +12,7 @@ INCLUDE_DIR = inc
 
 SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
-TARGET = $(BIN_DIR)/cocommunication
+TARGET = $(BIN_DIR)/canopenctl
 
 .DEFAULT_GOAL: all
 
@@ -35,4 +35,4 @@ install: $(TARGET)
 	install $(TARGET) /usr/local/bin
 
 uninstall:
-	rm -rf /usr/local/bin/cocommunication
+	rm -rf /usr/local/bin/canopenctl
