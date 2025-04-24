@@ -225,7 +225,8 @@ void print_usage()
 		   "	vs							- ASCII string,max size: 16 byte\n"
 		   "	d							- domain: bootloader only\n\n"
 		   "Example:\n"
-		   "	canopenctl can0 0x1 start\n"
+		   "	canopenctl can0 0x1 operational\n"
+		   "	canopenctl can0 0x1 read 0x1234 4 vs\n"
 		   "	canopenctl can0 0x1 write 0x1234 12 u32 0x42\n\n");
 }
 /////////////////////////////////////////////////////////////////////
@@ -320,7 +321,7 @@ int main(int argc, char *argv[])
 	break;
 	case CMD_READ:
 	{
-		if (argc < 6)
+		if (argc < 7)
 		{
 			fprintf(stderr, "Not enough arguments for read\n");
 			print_usage();
